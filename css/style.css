@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+:root { --accent: #8b5cf6; --bg: #f6f8fb; --card: #ffffff; --soft: #eaf0f7; --ink: #233244; --muted: #66758a; --brand: #1a3653; --brand2: #2a5688; --line: #dbe4ee; --radius: 24px; --shadow: 0 14px 34px rgba(20,39,64,.08); --max: 1180px; }
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body { margin: 0px; font-family: Inter, "Segoe UI", Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+
+a { text-decoration: none; color: inherit; }
+
+.container { max-width: var(--max); margin: 0px auto; padding: 0px 20px; }
+
+.lang-switch { position: fixed; top: 18px; right: 18px; z-index: 1000; }
+
+.lang-btn, .btn, .ghost-btn { border: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; cursor: pointer; transition: 0.25s; font-size: 0.95rem; }
+
+.lang-btn { background: rgba(255, 255, 255, 0.92); color: var(--brand); box-shadow: var(--shadow); backdrop-filter: blur(8px); }
+
+.btn { background: var(--brand); color: rgb(255, 255, 255); box-shadow: var(--shadow); display: inline-block; }
+
+.btn:hover { transform: translateY(-1px); background: rgb(22, 49, 74); }
+
+.ghost-btn { background: transparent; color: rgb(255, 255, 255); border: 1.5px solid rgba(255, 255, 255, 0.42); display: inline-block; }
+
+.ghost-btn:hover { background: rgba(255, 255, 255, 0.08); }
+
+.hero { position: relative; color: rgb(255, 255, 255); overflow: hidden; min-height: 780px; }
+
+.hero-bg { position: absolute; inset: 0px; background-image: url("../img/hero-bg.jpg"); background-size: cover; background-position: 72% 18%; }
+
+.hero-overlay { position: absolute; inset: 0px; background: linear-gradient(90deg, rgba(10, 20, 35, 0.92) 0%, rgba(12, 28, 45, 0.85) 30%, rgba(10, 20, 35, 0.35) 55%, rgba(0, 0, 0, 0.08) 100%); }
+
+.hero::after { content: ""; position: absolute; inset: 0px; background: radial-gradient(circle at left top, rgba(255, 255, 255, 0.14), transparent 24%); pointer-events: none; }
+
+.hero-inner { position: relative; z-index: 1; padding: 136px 40px 116px; display: flex; align-items: flex-start; min-height: 780px; }
+
+.hero-copy { max-width: 600px; }
+
+.eyebrow { display: inline-block; padding: 8px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.12); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.02em; }
+
+.hero-name { font-size: clamp(3rem, 5.8vw, 5.3rem); line-height: 1.1; margin: 22px 0px 14px; font-weight: 800; letter-spacing: -0.04em; }
+
+.hero-title { font-size: clamp(1.6rem, 3.2vw, 2.8rem); line-height: 1.22; margin: 0px 0px 26px; font-weight: 800; letter-spacing: -0.03em; max-width: 560px; }
+
+.lead { font-size: 1.12rem; max-width: 560px; color: rgba(255, 255, 255, 0.94); margin-bottom: 32px; line-height: 1.7; }
+
+.hero-points { display: flex; gap: 14px; flex-wrap: wrap; margin: 0px 0px 36px; padding: 0px; list-style: none; }
+
+.hero-points li { padding: 11px 14px; border-radius: 999px; background: rgba(255, 255, 255, 0.1); font-weight: 600; font-size: 0.95rem; backdrop-filter: blur(4px); }
+
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.section { padding: 74px 0px; }
+
+.section.soft { background: var(--soft); }
+
+.section-head { max-width: 760px; margin: 0px auto 28px; text-align: center; }
+
+.section-head.left { text-align: left; max-width: none; margin: 0px 0px 18px; }
+
+.section-head h2 { font-size: clamp(2rem, 3vw, 3rem); line-height: 1.08; margin: 0px 0px 12px; color: var(--brand); letter-spacing: -0.02em; }
+
+.section-head p { margin: 0px; color: var(--muted); font-size: 1.05rem; }
+
+.logo-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; margin-top: 22px; }
+
+.logo-pill { height: 70px; display: flex; align-items: center; justify-content: center; padding: 14px 18px; }
+
+.logo-pill img { max-height: 28px; max-width: 100%; width: auto; height: auto; display: block; object-fit: contain; }
+
+.logo-pill img.logo-microsoft { max-height: 32px; }
+.logo-pill img.logo-homecredit { max-height: 38px; }
+
+.about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 28px; align-items: stretch; }
+
+.copy, .photo-card, .ref, .faq-item, .contact-card, .event-panel { background: var(--card); border: 1px solid var(--line); border-radius: 26px; box-shadow: var(--shadow); }
+
+.copy { padding: 30px; }
+
+.copy p { margin: 0px 0px 14px; }
+
+.photo-card { padding: 14px; display: flex; flex-direction: column; }
+
+.photo-frame { border-radius: 22px; overflow: hidden; flex: 1 1 0%; }
+
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; border-radius: 22px; }
+
+.benefits { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 24px; }
+
+.benefit { background: rgb(255, 255, 255); border: 1px solid var(--line); border-radius: 22px; padding: 20px; box-shadow: var(--shadow); display: flex; align-items: center; gap: 14px; min-height: 96px; }
+
+.benefit-icon { width: 48px; height: 48px; border-radius: 14px; background: var(--soft); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex: 0 0 48px; }
+
+.benefit h3 { margin: 0px; font-size: 1.05rem; color: var(--brand); }
+
+.events-intro { text-align: center; max-width: 700px; margin: 0px auto 36px; color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+.gallery-item { position: relative; overflow: hidden; border-radius: 24px; min-height: 260px; box-shadow: var(--shadow); border: 1px solid rgba(255, 255, 255, 0.38); }
+
+.gallery-item img { width: 100%; height: 100%; min-height: 260px; object-fit: cover; display: block; }
+
+.gallery-item::after { content: ""; position: absolute; inset: 0px; background: linear-gradient(rgba(9, 19, 31, 0.04), rgba(9, 19, 31, 0.52)); pointer-events: none; }
+
+.gallery-item span { position: absolute; left: 20px; bottom: 18px; z-index: 1; color: rgb(255, 255, 255); font-weight: 800; font-size: 1.06rem; }
+
+.quote { position: relative; color: rgb(255, 255, 255); border-radius: 28px; padding: 56px 28px; text-align: center; box-shadow: var(--shadow); overflow: hidden; background: url("../img/quote-bg.jpg") center 45% / cover no-repeat; }
+
+.quote::before { content: ""; position: absolute; inset: 0px; border-radius: 28px; background: linear-gradient(135deg, rgba(26, 54, 83, 0.65), rgba(38, 79, 125, 0.55)); }
+
+.quote p { font-style: italic; font-size: 1.4rem; font-weight: 400; max-width: 800px; margin: 0px auto; position: relative; z-index: 1; line-height: 1.7; letter-spacing: 0.01em; text-shadow: rgba(0, 0, 0, 0.85) 0px 2px 16px, rgba(0, 0, 0, 0.7) 0px 1px 6px, rgba(0, 0, 0, 0.5) 0px 0px 30px; }
+
+.refs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+.ref { padding: 22px; }
+
+.avatar { width: 62px; height: 62px; border-radius: 50%; background: rgb(201, 214, 227); color: var(--brand); display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 14px; }
+
+.ref-photo { width: 62px; height: 62px; border-radius: 50%; object-fit: cover; object-position: center top; margin-bottom: 14px; }
+
+.ref p { color: var(--muted); margin: 0px 0px 12px; font-style: italic; }
+
+.author { font-weight: 800; color: var(--brand); margin-top: 8px; }
+
+.role { font-size: 0.92rem; color: var(--muted); }
+
+.contact-grid { display: grid; grid-template-columns: 0.88fr 1.12fr; gap: 18px; max-width: 800px; margin: 0 auto; }
+
+.contact-card { padding: 24px; }
+
+.contact-card h3 { margin-top: 0px; color: var(--brand); }
+
+.contact-line { display: block; font-weight: 700; color: var(--brand2); margin-bottom: 10px; }
+
+.contact-photo { margin-top: 16px; border-radius: 22px; overflow: hidden; }
+
+.contact-photo img { width: 100%; height: auto; display: block; border-radius: 22px; max-height: 280px; object-fit: cover; object-position: center top; }
+
+
+
+.faq-wrap { max-width: 900px; margin: 0px auto; }
+
+.faq-item { padding: 18px 20px; margin-bottom: 12px; }
+
+.faq-q { display: flex; justify-content: space-between; align-items: center; gap: 18px; cursor: pointer; }
+
+.faq-q h3 { margin: 0px; font-size: 1.02rem; color: var(--brand); }
+
+.faq-a { display: none; padding-top: 10px; color: var(--muted); }
+
+.faq-item.open .faq-a { display: block; }
+
+.faq-sign { font-size: 1.4rem; color: var(--brand); font-weight: 700; transition: transform 0.25s; }
+
+.faq-item.open .faq-sign { transform: rotate(45deg); }
+
+footer { padding: 32px 0px 42px; text-align: center; color: rgba(255,255,255,0.7); font-size: 0.94rem; background: linear-gradient(135deg, #0f1e2f 0%, #1a3350 100%); }
+
+footer a { color: rgba(255,255,255,0.9); }
+
+footer a:hover { text-decoration: underline; color: #ffffff; }
+
+.footer-inner { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+
+.footer-links { display: flex; gap: 18px; margin-top: 4px; }
+
+@media (min-width: 721px) {
+  .quote { min-height: 280px; display: flex; align-items: center; justify-content: center; }
+}
+
+@media (max-width: 1024px) {
+  .hero { min-height: auto; }
+  .hero-inner { min-height: auto; padding: 90px 24px 76px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .logo-strip { grid-template-columns: repeat(4, 1fr); }
+  .benefits { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .eyebrow { background: rgba(0, 0, 0, 0.45); }
+  .hero { min-height: 560px; }
+  .hero-bg { background-position: center 20%; }
+  .hero-overlay { background: linear-gradient(rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.12) 30%, rgba(10, 20, 35, 0.78) 60%, rgba(10, 20, 35, 0.94) 100%); }
+  .hero-inner { min-height: 560px; display: flex; align-items: flex-end; padding-bottom: 48px; }
+  .hero-copy { max-width: 100%; }
+  .logo-strip { grid-template-columns: repeat(3, 1fr); }
+  .logo-pill img.logo-microsoft { max-height: 52px !important; }
+  .about-grid { grid-template-columns: 1fr; }
+  .gallery, .refs, .benefits { grid-template-columns: 1fr; }
+  .quote p { font-size: 1.2rem; text-shadow: rgba(0, 0, 0, 0.85) 0px 2px 16px, rgba(0, 0, 0, 0.7) 0px 1px 6px, rgba(0, 0, 0, 0.5) 0px 0px 30px; }
+  .lang-switch { top: 14px; right: 14px; }
+  .benefit { min-height: 84px; }
+  .photo-card { order: 1; }
+  .copy { order: 2; }
+  .hero-title { font-size: clamp(1.4rem, 5vw, 2rem); }
+}
+.contact-icon { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: var(--soft); font-size: 1.1rem; margin-right: 10px; vertical-align: middle; flex-shrink: 0; }
+.contact-card h3 { display: flex; align-items: center; }
